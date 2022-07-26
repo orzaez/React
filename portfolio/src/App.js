@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css';//importamos el archivo css
+import Portfolio from './componentes/portofolio.js';//importamos portfolio
 
-function App() {
+
+function App() {//Componente principal llamado App que esta renderizando a Portfolio x ejemplo
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='contenedor-inicio'>
+      <Portfolio /> 
+      </div>
     </div>
   );
 }
 
-export default App;
+export default App;//mostramos aplicacion
