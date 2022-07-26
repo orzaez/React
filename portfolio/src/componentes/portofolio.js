@@ -1,16 +1,23 @@
 import React from "react";
 import "../stylesheet/inicio.css" ;
 
-function Portfolio(){
+function Portfolio(props){//props son las propiedas del portfolio que nos permiten hacer las partes del mismo de forma dinamica
   return(
     <div className="contenedor-foto">
       <img className="foto" 
-      src={require("../imagenes/fotomiguel.jpeg")}//con llaves y require tambien se puede importar imagenen
-      alt="Imagen mia"/>
-      <div className=".contenedor-nombre-descripcion">
-        <p className="nombre">Miguel Orzáez Pintor.</p>
-        <p className="estudios">Administrador de Sistemas y estudiante de Ingeniera Informatica</p>
-        <p className="descripcion">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p> 
+      src={require(`../imagenes/${props.imagen}.jpeg`)}//con llaves y require tambien se puede importar imagenen
+      alt={`${props.nombreimagen}`} 
+      />
+      <div className="contenedor-nombre-descripcion">
+        <p className="nombre">
+          <strong>{props.nombre}</strong>
+          </p>
+        <p className="estudios">
+          {props.cargo}
+          </p>
+        <p className="descripcion">
+          {props.descripcion}
+          </p> 
       </div>
     
     </div>
